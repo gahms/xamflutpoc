@@ -13,6 +13,8 @@ $ flutter build ios-framework --output=build/ios-flutter-framework
 ```
 $ cd xamflutpoc
 $ sharpie bind -o FlutterBindings -sdk iphoneos13.6 -framework ../my_flutter/build/ios-flutter-framework/Debug/Flutter.framework
+$ cp ApiDefinitions.cs ApiDefinition.cs 
+$ cp StructsAndEnums.cs Structs.cs 
 ```
 
 ## References
