@@ -455,6 +455,7 @@ namespace Flutter
   protocol, then [Model] is redundant and will generate code that will never
   be used.
 */
+	[Protocol]
 	[BaseType(typeof(NSObject))]
 	interface FlutterStreamHandler
 	{

@@ -134,5 +134,21 @@
             <DependentUpon>ViewController.cs</DependentUpon>
         </Compile>
     </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\FlutterBindings\FlutterBindings.csproj">
+        <Project>{22B7BD02-D447-471D-8412-E34DBFE4CF65}</Project>
+        <Name>FlutterBindings</Name>
+      </ProjectReference>
+    </ItemGroup>
+    <ItemGroup>
+      <NativeReference Include="..\..\my_flutter\build\ios-flutter-framework\Debug\App.framework">
+        <Kind>Framework</Kind>
+        <SmartLink>False</SmartLink>
+      </NativeReference>
+      <NativeReference Include="..\..\my_flutter\build\ios-flutter-framework\Debug\Flutter.framework">
+        <Kind>Framework</Kind>
+        <SmartLink>False</SmartLink>
+      </NativeReference>
+    </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

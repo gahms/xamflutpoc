@@ -1,4 +1,5 @@
-﻿using Foundation;
+﻿using Flutter;
+using Foundation;
 using System;
 using UIKit;
 
@@ -25,6 +26,10 @@ namespace xamflutpoc
         partial void UIButton197_TouchUpInside(UIButton sender)
         {
             Console.WriteLine("Tapped!");
+            var flutterEngine = AppDelegate.Instance.flutterEngine;
+            var vc = new FlutterViewController(flutterEngine, null, null);
+
+            PresentViewController(vc, true, null);
         }
     }
 }

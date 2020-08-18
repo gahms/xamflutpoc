@@ -1,5 +1,6 @@
 ﻿using Foundation;
 using UIKit;
+using Flutter;
 
 namespace xamflutpoc
 {
@@ -8,6 +9,9 @@ namespace xamflutpoc
     [Register("AppDelegate")]
     public class AppDelegate : UIResponder, IUIApplicationDelegate
     {
+        public static AppDelegate Instance => UIApplication.SharedApplication.Delegate as AppDelegate;
+
+        public FlutterEngine flutterEngine;
 
         [Export("window")]
         public UIWindow Window { get; set; }
@@ -17,6 +21,12 @@ namespace xamflutpoc
         {
             // Override point for customization after application launch.
             // If not required for your application you can safely delete this method
+
+            flutterEngine = new FlutterEngine("my flutter engine");
+            flutterEngine.Run();
+
+            // GeneratedPluginRegistrant.Register(with: this.flutterEngine);
+
             return true;
         }
 
