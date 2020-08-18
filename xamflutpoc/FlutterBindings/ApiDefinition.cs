@@ -692,7 +692,8 @@ namespace Flutter
 	interface FlutterPlugin : FlutterApplicationLifeCycleDelegate
 	{
 		// @required +(void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar> * _Nonnull)registrar;
-		[Static, Abstract]
+		[Static]
+		[Abstract]
 		[Export ("registerWithRegistrar:")]
 		void RegisterWithRegistrar (FlutterPluginRegistrar registrar);
 
