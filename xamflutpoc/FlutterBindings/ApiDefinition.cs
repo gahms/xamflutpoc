@@ -53,13 +53,15 @@ namespace Flutter
   the generated interface. If consumers are not supposed to implement this
   protocol, then [Model] is redundant and will generate code that will never
   be used.
-*/[Protocol]
+*/
+	[Protocol]
+	[Model]
+	[BaseType(typeof(NSObject))]
 	interface FlutterMessageCodec
 	{
 		// @required +(instancetype _Nonnull)sharedInstance;
-		[Static, Abstract]
-		[Export ("sharedInstance")]
-		 FlutterMessageCodec SharedInstance ();
+		[Static, Export ("sharedInstance")]
+		FlutterMessageCodec SharedInstance ();
 
 		// @required -(NSData * _Nullable)encode:(id _Nullable)message;
 		[Abstract]
@@ -295,13 +297,15 @@ namespace Flutter
   the generated interface. If consumers are not supposed to implement this
   protocol, then [Model] is redundant and will generate code that will never
   be used.
-*/[Protocol]
+*/
+	[Protocol]
+	[Model]
+	[BaseType(typeof(NSObject))]
 	interface FlutterMethodCodec
 	{
 		// @required +(instancetype _Nonnull)sharedInstance;
-		[Static, Abstract]
-		[Export ("sharedInstance")]
-		FlutterMethodCodec SharedInstance ();
+		[Static, Export ("sharedInstance")]
+		FlutterMethodCodec SharedInstance();
 
 		// @required -(NSData * _Nonnull)encodeMethodCall:(FlutterMethodCall * _Nonnull)methodCall;
 		[Abstract]
@@ -450,7 +454,8 @@ namespace Flutter
   the generated interface. If consumers are not supposed to implement this
   protocol, then [Model] is redundant and will generate code that will never
   be used.
-*/[Protocol]
+*/
+	[BaseType(typeof(NSObject))]
 	interface FlutterStreamHandler
 	{
 		// @required -(FlutterError * _Nullable)onListenWithArguments:(id _Nullable)arguments eventSink:(FlutterEventSink _Nonnull)events;
@@ -687,14 +692,14 @@ namespace Flutter
   the generated interface. If consumers are not supposed to implement this
   protocol, then [Model] is redundant and will generate code that will never
   be used.
-*/[Protocol]
+*/
+	[Protocol]
+	[Model]
 	[BaseType (typeof(NSObject))]
 	interface FlutterPlugin : FlutterApplicationLifeCycleDelegate
 	{
 		// @required +(void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar> * _Nonnull)registrar;
-		[Static]
-		[Abstract]
-		[Export ("registerWithRegistrar:")]
+		[Static, Export ("registerWithRegistrar:")]
 		void RegisterWithRegistrar (FlutterPluginRegistrar registrar);
 
 		/* MISSING??
