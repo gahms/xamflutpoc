@@ -1,34 +1,15 @@
-﻿using Foundation;
+﻿using Flutter;
+using Foundation;
 using UIKit;
-using Flutter;
 
 namespace xamflutpoc
 {
     // The UIApplicationDelegate for the application. This class is responsible for launching the
     // User Interface of the application, as well as listening (and optionally responding) to application events from iOS.
     [Register("AppDelegate")]
-    public class AppDelegate : UIResponder, IUIApplicationDelegate
+    public class AppDelegate : FlutterAppDelegate
     {
         public static AppDelegate Instance => UIApplication.SharedApplication.Delegate as AppDelegate;
-
-        public FlutterEngine flutterEngine;
-
-        [Export("window")]
-        public UIWindow Window { get; set; }
-
-        [Export("application:didFinishLaunchingWithOptions:")]
-        public bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
-        {
-            // Override point for customization after application launch.
-            // If not required for your application you can safely delete this method
-
-            flutterEngine = new FlutterEngine("my flutter engine");
-            flutterEngine.Run();
-
-            // GeneratedPluginRegistrant.Register(with: this.flutterEngine);
-
-            return true;
-        }
 
         // UISceneSession Lifecycle
 

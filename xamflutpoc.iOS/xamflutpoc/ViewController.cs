@@ -1,6 +1,5 @@
-﻿using Flutter;
-using Foundation;
-using System;
+﻿using System;
+using Flutter;
 using UIKit;
 
 namespace xamflutpoc
@@ -14,7 +13,18 @@ namespace xamflutpoc
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-            // Perform any additional setup after loading the view, typically from a nib.
+
+            var flutterEngine = new FlutterEngine("");
+            flutterEngine.Run();
+            GeneratedPluginRegistrant.RegisterWithRegistry(flutterEngine);
+
+            var vc = new FlutterViewController(flutterEngine, null, null);
+            AddChildViewController(vc);
+            View.AddSubview(vc.View);
+            vc.View.Frame = new CoreGraphics.CGRect(
+                View.Frame.Location.X, View.Frame.Location.Y,
+                View.Frame.Size.Width, View.Frame.Size.Height / 2);
+            vc.DidMoveToParentViewController(this);
         }
 
         public override void DidReceiveMemoryWarning()
@@ -26,9 +36,12 @@ namespace xamflutpoc
         partial void UIButton197_TouchUpInside(UIButton sender)
         {
             Console.WriteLine("Tapped!");
-            var flutterEngine = AppDelegate.Instance.flutterEngine;
-            var vc = new FlutterViewController(flutterEngine, null, null);
 
+            var flutterEngine = new FlutterEngine("");
+            flutterEngine.Run();
+            GeneratedPluginRegistrant.RegisterWithRegistry(flutterEngine);
+
+            var vc = new FlutterViewController(flutterEngine, null, null);
             PresentViewController(vc, true, null);
         }
     }

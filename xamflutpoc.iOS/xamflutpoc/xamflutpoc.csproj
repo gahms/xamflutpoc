@@ -144,11 +144,24 @@
       </ProjectReference>
     </ItemGroup>
     <ItemGroup>
-      <NativeReference Include="..\..\my_flutter\build\ios-flutter-framework\Debug\App.framework">
+      <NativeReference Include="..\..\my_flutter\build\ios-flutter-framework\$(Configuration)\Flutter.framework">
         <Kind>Framework</Kind>
         <SmartLink>False</SmartLink>
       </NativeReference>
-      <NativeReference Include="..\..\my_flutter\build\ios-flutter-framework\Debug\Flutter.framework">
+      <NativeReference Include="..\..\my_flutter\build\ios-flutter-framework\$(Configuration)\App.framework">
+        <Kind>Framework</Kind>
+        <SmartLink>False</SmartLink>
+      </NativeReference>
+      <NativeReference Include="..\..\my_flutter\build\ios-flutter-framework\$(Configuration)\FlutterPluginRegistrant.framework">
+        <Kind>Framework</Kind>
+        <SmartLink>False</SmartLink>
+        <LinkerFlags>-ObjC</LinkerFlags>
+      </NativeReference>
+      <NativeReference Include="..\..\my_flutter\build\ios-flutter-framework\$(Configuration)\package_info.framework">
+        <Kind>Framework</Kind>
+        <SmartLink>False</SmartLink>
+      </NativeReference>
+      <NativeReference Include="..\..\my_flutter\build\ios-flutter-framework\$(Configuration)\device_info.framework">
         <Kind>Framework</Kind>
         <SmartLink>False</SmartLink>
       </NativeReference>

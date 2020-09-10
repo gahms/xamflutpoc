@@ -1150,4 +1150,27 @@ namespace Flutter
 		[Export ("binaryMessenger")]
 		FlutterBinaryMessenger BinaryMessenger { get; }
 	}
+
+	interface IFlutterPluginRegistry {}
+
+	// @interface GeneratedPluginRegistrant : NSObject
+	[BaseType(typeof(NSObject))]
+	interface GeneratedPluginRegistrant
+	{
+		// +(void)registerWithRegistry:(NSObject<FlutterPluginRegistry> * _Nonnull)registry;
+		[Static]
+		[Export("registerWithRegistry:")]
+		void RegisterWithRegistry(IFlutterPluginRegistry registry);
+	}
+
+	partial interface Constants
+	{
+		// extern double FlutterPluginRegistrantVersionNumber;
+		[Field("FlutterPluginRegistrantVersionNumber", "__Internal")]
+		double FlutterPluginRegistrantVersionNumber { get; }
+
+		// extern const unsigned char [] FlutterPluginRegistrantVersionString;
+		[Field("FlutterPluginRegistrantVersionString", "__Internal")]
+		byte[] FlutterPluginRegistrantVersionString { get; }
+	}
 }
