@@ -33,7 +33,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   List<String> _texts = [];
 
-  void _incrementCounter() {
+  void _close() {
     SystemNavigator.pop();
   }
 
@@ -87,9 +87,9 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.play_arrow), // Icon(Icons.add),
+        onPressed: _close,
+        tooltip: 'Close',
+        child: Icon(Icons.close),
       ),
     );
   }
