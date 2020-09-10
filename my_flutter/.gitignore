@@ -52,6 +52,10 @@ lib/generated_plugin_registrant.dart
 **/.ios/ServiceDefinitions.json
 **/.ios/Runner/GeneratedPluginRegistrant.*
 
+**/.ios/Flutter/engine/Flutter.framework
+**/.ios/Flutter/engine/Flutter.podspec
+**/.ios/Flutter/FlutterPluginRegistrant
+
 # Exceptions to above rules.
 !**/.ios/**/default.mode1v3
 !**/.ios/**/default.mode2v3
