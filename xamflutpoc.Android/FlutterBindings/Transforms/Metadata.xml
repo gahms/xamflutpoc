@@ -17,5 +17,15 @@
             <method abstract="false" deprecated="not deprecated" final="false" name="withNewEngine" return="io.flutter.embedding.android.FlutterActivity.NewEngineIntentBuilder" static="true" visibility="public">
             </method>
         </class>
+        <class abstract="false" deprecated="not deprecated" final="false" name="FlutterFragment" static="false" visibility="public" extends="androidx.fragment.app.Fragment">
+            <constructor deprecated="not deprecated" final="false" name="FlutterFragment" static="false" type="io.flutter.embedded.android.FlutterFragment" visibility="public" />
+            <method abstract="false" deprecated="not deprecated" final="false" name="createDefault" return="io.flutter.embedding.android.FlutterFragment" static="true" visibility="public">
+            </method>
+            <method abstract="false" deprecated="not deprecated" final="false" name="withCachedEngine" return="io.flutter.embedding.android.FlutterFragment.CachedEngineFragmentBuilder" static="true" visibility="public">
+                <parameter name="cachedEngineId" type="java.lang.String" />
+            </method>
+            <method abstract="false" deprecated="not deprecated" final="false" name="withNewEngine" return="io.flutter.embedding.android.FlutterFragment.NewEngineFragmentBuilder" static="true" visibility="public">
+            </method>
+        </class>
     </add-node>
 </metadata>

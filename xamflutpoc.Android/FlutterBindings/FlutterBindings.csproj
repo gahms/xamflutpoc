@@ -77,6 +77,20 @@
     <EmbeddedJar Include="Jars\x86_64_release-1.0.0-d1bc06f032f9d6c148ea6b96b48261d6f545004f.jar" />
     <EmbeddedJar Include="Jars\x86_debug-1.0.0-d1bc06f032f9d6c148ea6b96b48261d6f545004f.jar" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Xamarin.AndroidX.Core">
+      <Version>1.3.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.AndroidX.Annotation">
+      <Version>1.1.0.4</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.AndroidX.Lifecycle.Common">
+      <Version>2.2.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.AndroidX.Fragment">
+      <Version>1.2.5.1</Version>
+    </PackageReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
